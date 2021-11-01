@@ -42,11 +42,11 @@ void effects() {
         break;
       case 3: ballRoutine();
         break;
-      case 4: rainbowRoutine();
+      case 4: rainbowRoutine(0);
         break;
       case 5: rainbowColorsRoutine();
         break;
-      case 6: fireRoutine();
+      case 6: fire2Routine();
         break;
       case 7: matrixRoutine();
         break;
@@ -58,7 +58,7 @@ void effects() {
         break;
       case 11: sparklesRoutine();
         break;
-      case 12: //rainbowDiagonalRoutine();
+      case 12: rainbowRoutine(3);
         break;
       case 13: madnessNoise();
         break;

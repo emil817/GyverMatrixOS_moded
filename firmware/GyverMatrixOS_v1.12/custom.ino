@@ -7,8 +7,7 @@
 
 // подключаем внешние файлы с картинками
 //#include "bitmap2.h"
-#include "vgChars.h"
-#include "superheroes.h"
+#include "Screen.h"
 
 /*
    Режимы:
@@ -21,19 +20,18 @@
     starfallRoutine();    // звездопад (кометы)
     ballRoutine();        // квадратик
     ballsRoutine();       // шарики
-    rainbowRoutine();     // радуга во всю матрицу горизонтальная
+    rainbowRoutine();     // радуга во всю матрицу
     fireRoutine();        // огонь
-    analyzerRoutineRelease();//псевдоанализатор частот
+    analyzerRoutine();    //псевдоанализатор частот
     cyclonRoutine();      // циклон
     lightBallsRoutine();  // пейнтбол
     swirlRoutine();       // водоворот
     lightersRoutine();    // светлячки
     pacificaRoutine();    // прикольное безумие
     shadowsRoutine();     // тени
-    paletteRoutine();     // палитра
+    paletteRoutine()      // палитра
     prizmataRoutine();    // синусы
     munchRoutine();       // вышиванка
-    rainRoutine();        // дождь
     fire2Routine();       // огонь2 - камин
     arrowsRoutine();      // стрелки
 
@@ -55,6 +53,7 @@
     runnerRoutine();    // бегалка прыгалка
     flappyRoutine();    // flappy bird
     arkanoidRoutine();  // арканоид
+    lifeRoutine();      // жызнь
 
   Бегущая строка:
     fillString("Ваш текст", цвет);    // цвет вида 0x00ff25 или CRGB::Red и проч. цвета
@@ -66,7 +65,12 @@
     imageRoutine1();                  // пример использования
     animation1();                     // пример анимации
 
+
+
 */
+
+// не забудьте указать количество режимов для корректного переключения с последнего на первый
+#define MODES_AMOUNT 43  // количество кастомных режимов (которые переключаются сами или кнопкой)
 
 // ************************* СВОЙ СПИСОК РЕЖИМОВ ************************
 // список можно менять, соблюдая его структуру. Можно удалять и добавлять эффекты, ставить их в
@@ -76,12 +80,11 @@
 
 void customModes() {
   switch (thisMode) {
-
-    case 0: fillString("КРАСНЫЙ", CRGB::Red);
+    case 0: fillString("RGB LED", CRGB::Red);
       break;
     case 1: fillString("РАДУГА", 1);
       break;
-    case 2: fillString("RGB LED", 2);
+    case 2: fillString("Гирлянда", 2);
       break;
     case 3: madnessNoise();
       break;
@@ -113,33 +116,56 @@ void customModes() {
       break;
     case 17: ballsRoutine();
       break;
-    case 18: rainbowRoutine();
+    case 18: rainbowRoutine(0);
       break;
     case 19: cyclonRoutine();
       break;
-    case 20: fireRoutine();
+    case 20: rainbowRoutine(1);
       break;
-    case 21: snakeRoutine();
+    case 21: clockRoutine();
       break;
-    case 22: tetrisRoutine();
+    case 22: analyzerRoutine();
       break;
-    case 23: mazeRoutine();
+    case 23: lightBallsRoutine();
       break;
-    case 24: runnerRoutine();
+    case 24: swirlRoutine();
       break;
-    case 25: flappyRoutine();
+    case 25: lightersRoutine();
       break;
-    case 26: arkanoidRoutine();
+    case 26: pacificaRoutine();
       break;
-    case 27: clockRoutine();
+    case 27: shadowsRoutine();
       break;
-    case 28: analyzerRoutineRelease();
+    case 28: paletteRoutine();
       break;
-    case 30: animationVgCharacters();
+    case 29: prizmataRoutine();
       break;
-    case 31: animationSuperheroes();
+    case 30: munchRoutine();
       break;
-
+    case 31: rainRoutine();
+      break;
+    case 32: fire2Routine();
+      break;
+    case 33: rainbowRoutine(2);
+      break;
+    case 34: snakeRoutine();
+      break;
+    case 35: tetrisRoutine();
+      break;
+    case 36: mazeRoutine();
+      break;
+    case 37: runnerRoutine();
+      break;
+    case 38: arkanoidRoutine();
+      break;
+    case 39: lifeRoutine();
+      break;
+    case 40: imageRoutinePicahu();
+      break;
+    case 41: clockRoutine();
+      break;
+    case 42: rainbowRoutine(3);
+      break;
   }
 
 }
@@ -183,11 +209,12 @@ void customModes() {
 #define MC_RAIN                 35
 #define MC_FIRE2                36
 #define MC_ARROWS               37
+#define MC_LIFE                 38
 
 
 // функция загрузки картинки в матрицу. должна быть здесь, иначе не работает =)
 void loadImage(uint16_t (*frame)[8]) {
-  for (byte i = 0; i < 8; i++)
+  for (byte i = 0; i < 8; i++)   
     for (byte j = 0; j < 8; j++)
       drawPixelXY(i, j, gammaCorrection(expandColor((pgm_read_word(&(frame[8 - j - 1][i]))))));
   // да, тут происходит лютенький копец, а именно:
@@ -195,7 +222,7 @@ void loadImage(uint16_t (*frame)[8]) {
   // 2) expandColor - расширяем цвет до 24 бит (спасибо adafruit)
   // 3) gammaCorrection - проводим коррекцию цвета для более корректного отображения
 }
-timerMinim gifTimer(4);
+timerMinim gifTimer(4000);
 
 // ********************** ПРИМЕРЫ ВЫВОДА КАРТИНОК ***********************
 
@@ -212,23 +239,14 @@ void imageRoutinePicahu() {
 }
 
 
-
-void animationSuperheroes() {
-  if (gifTimer.isReady()) {
-    frameNum++;
-    if (frameNum >= sizeof(SframesArray)) frameNum = 0;
-    loadImage(SframesArray[frameNum]);
+void releaseEffectResources(uint8_t aMode) {  
+  switch (aMode) {
+    case 28:             paletteRoutineRelease(); break;
+    case 0:            analyzerRoutineRelease(); break;
+    case 32:               fire2RoutineRelease(); break;
+    case 43:                lifeRoutineRelease(); break;
   }
 }
-void animationVgCharacters() {
-  if (gifTimer.isReady()) {
-    frameNum++;
-    if (frameNum >= sizeof(framesArray)) frameNum = 0;
-    loadImage(framesArray[frameNum]);
-  }
-}
-
-
 
 // ********************* ОСНОВНОЙ ЦИКЛ РЕЖИМОВ *******************
 #if (SMOOTH_CHANGE == 1)
@@ -253,6 +271,7 @@ static void prevMode() {
 #endif
 }
 void nextModeHandler() {
+  releaseEffectResources(thisMode);
   thisMode++;
   if (thisMode >= MODES_AMOUNT) thisMode = 0;
   loadingFlag = true;
@@ -261,6 +280,7 @@ void nextModeHandler() {
   FastLED.show();
 }
 void prevModeHandler() {
+  releaseEffectResources(thisMode);
   thisMode--;
   if (thisMode < 0) thisMode = MODES_AMOUNT - 1;
   loadingFlag = true;

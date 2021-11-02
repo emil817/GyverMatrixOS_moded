@@ -82,25 +82,6 @@ void snowRoutine() {
   }
 }
 
-// *********** Дождь ***********
-void rainRoutine() {
-  modeCode = 12;
-  // сдвигаем всё вниз
-  for (byte x = 0; x < WIDTH; x++) {
-    for (byte y = 0; y < HEIGHT - 1; y++) {
-      drawPixelXY(x, y, getPixColorXY(x, y + 1));
-    }
-  }
-
-  for (byte x = 0; x < WIDTH; x++) {
-    // заполняем случайно верхнюю строку
-    // а также не даём двум блокам по вертикали вместе быть
-    if (getPixColorXY(x, HEIGHT - 2) == 0 && (random(0, SNOW_DENSE) == 0))
-      drawPixelXY(x, HEIGHT - 1, 0x0000FF - 0x101010 * random(0, 4));
-    else
-      drawPixelXY(x, HEIGHT - 1, 0x000000);
-  }
-}
 // ------------- ПЕЙНТБОЛ -------------
 
 uint8_t USE_SEGMENTS_PAINTBALL = 0;
@@ -903,7 +884,7 @@ void starfallRoutine() {
   for (byte i = HEIGHT / 2; i < HEIGHT; i++) {
     fadePixel(0, i, TAIL_STEP);
   }
-  for (byte i = 0; i < WIDTH / 2; i++) {
+  for (byte i = 0; i < WIDTH - 12; i++) {
     fadePixel(i, HEIGHT - 1, TAIL_STEP);
   }
 }

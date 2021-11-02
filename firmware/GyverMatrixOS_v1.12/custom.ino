@@ -70,7 +70,7 @@
 */
 
 // не забудьте указать количество режимов для корректного переключения с последнего на первый
-#define MODES_AMOUNT 43  // количество кастомных режимов (которые переключаются сами или кнопкой)
+#define MODES_AMOUNT 42  // количество кастомных режимов (которые переключаются сами или кнопкой)
 
 // ************************* СВОЙ СПИСОК РЕЖИМОВ ************************
 // список можно менять, соблюдая его структуру. Можно удалять и добавлять эффекты, ставить их в
@@ -80,11 +80,11 @@
 
 void customModes() {
   switch (thisMode) {
-    case 0: fillString("RGB LED", CRGB::Red);
+    case 0: fillString("С НАСТУПАЮЩИМ НОВЫМ ГОДОМ!!!", CRGB::Red);
       break;
-    case 1: fillString("РАДУГА", 1);
+    case 1: fillString("Гирлянда", 1);
       break;
-    case 2: fillString("Гирлянда", 2);
+    case 2: fillString("RGB LED", 2);
       break;
     case 3: madnessNoise();
       break;
@@ -152,19 +152,17 @@ void customModes() {
       break;
     case 35: tetrisRoutine();
       break;
-    case 36: mazeRoutine();
+    case 36: runnerRoutine();
       break;
-    case 37: runnerRoutine();
+    case 37: arkanoidRoutine();
       break;
-    case 38: arkanoidRoutine();
+    case 38: lifeRoutine();
       break;
-    case 39: lifeRoutine();
+    case 39: imageRoutinePicahu();
       break;
-    case 40: imageRoutinePicahu();
+    case 40: clockRoutine();
       break;
-    case 41: clockRoutine();
-      break;
-    case 42: rainbowRoutine(3);
+    case 41: rainbowRoutine(3);
       break;
   }
 

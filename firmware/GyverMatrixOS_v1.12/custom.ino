@@ -7,7 +7,7 @@
 
 // подключаем внешние файлы с картинками
 //#include "bitmap2.h"
-#include "Screen.h"
+//#include "Screen.h"
 
 /*
    Режимы:
@@ -70,7 +70,7 @@
 */
 
 // не забудьте указать количество режимов для корректного переключения с последнего на первый
-#define MODES_AMOUNT 42  // количество кастомных режимов (которые переключаются сами или кнопкой)
+#define MODES_AMOUNT 40  // количество кастомных режимов (которые переключаются сами или кнопкой)
 
 // ************************* СВОЙ СПИСОК РЕЖИМОВ ************************
 // список можно менять, соблюдая его структуру. Можно удалять и добавлять эффекты, ставить их в
@@ -142,27 +142,23 @@ void customModes() {
       break;
     case 30: munchRoutine();
       break;
-    case 31: rainRoutine();
+    case 31: fire2Routine();
       break;
-    case 32: fire2Routine();
+    case 32: rainbowRoutine(2);
       break;
-    case 33: rainbowRoutine(2);
+    case 33: snakeRoutine();
       break;
-    case 34: snakeRoutine();
+    case 34: tetrisRoutine();
       break;
-    case 35: tetrisRoutine();
+    case 35: runnerRoutine();
       break;
-    case 36: runnerRoutine();
+    case 36: arkanoidRoutine();
       break;
-    case 37: arkanoidRoutine();
+    case 37: lifeRoutine();
       break;
-    case 38: lifeRoutine();
+    case 38: clockRoutine();
       break;
-    case 39: imageRoutinePicahu();
-      break;
-    case 40: clockRoutine();
-      break;
-    case 41: rainbowRoutine(3);
+    case 39: rainbowRoutine(3);
       break;
   }
 
@@ -229,12 +225,6 @@ timerMinim gifTimer(4000);
 //
 
 // показать картинку
-void imageRoutinePicahu() {
-  if (loadingFlag) {
-    loadingFlag = false;
-    loadImage(frame99);
-  }
-}
 
 
 void releaseEffectResources(uint8_t aMode) {  

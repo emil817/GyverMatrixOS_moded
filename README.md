@@ -19,7 +19,6 @@ https://github.com/vvip-68/GyverPanelWiFi
 Гайд по матрицам от AlexGyver: https://alexgyver.ru/matrix_guide/  
 
 
-
 #### Особенности:
  - Управление со смартфона по Bluetooth
 #### Режимы:
@@ -61,7 +60,6 @@ https://github.com/vvip-68/GyverPanelWiFi
 - **firmware** - прошивки для Arduino
 - **schemes** - схемы подключения компонентов
 - **Android** - файлы с приложениями, примерами для Android и Thunkable
-- **3Dprint** - файлы для печати и исходники
 
 <a id="chapter-2"></a>
 ## Схемы

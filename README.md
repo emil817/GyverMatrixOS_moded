@@ -4,19 +4,21 @@
 * [Схемы подключения](#chapter-2)
 * [Материалы и компоненты](#chapter-3)
 * [Как скачать и прошить](#chapter-4)
-* [FAQ](#chapter-5)
-* [Полезная информация](#chapter-6)
-[![AlexGyver YouTube](http://alexgyver.ru/git_banner.jpg)](https://www.youtube.com/channel/UCgtAOyEQdAyjvm9ATCi_Aig?sub_confirmation=1)
 
 <a id="chapter-0"></a>
 ## Описание проекта
 Матрица из адресных светодиодов с управлением по bluetooth.
 Этот проект является соединением проектов AlexGyver GyverMatrixBT и vvip-68 GyverPanelWiFi.
 Это прошивка для гирлянд на ws2812b без управления по wifi, основа - GyverMatrixBT, но добавлены режимы из прошивки vvip-68.
+https://github.com/AlexGyver/GyverMatrixBT
+https://github.com/vvip-68/GyverPanelWiFi
+
 
 [Прошивка](https://github.com/emil817/GyverMatrixOS_moded/tree/main/firmware/GyverMatrixOS_v1.12)
 
 Гайд по матрицам от AlexGyver: https://alexgyver.ru/matrix_guide/  
+
+
 
 #### Особенности:
  - Управление со смартфона по Bluetooth
@@ -123,31 +125,3 @@
 
     GLOBAL_COLOR_1 CRGB::Green    // основной цвет №1 для игр
     GLOBAL_COLOR_2 CRGB::Orange   // основной цвет №2 для игр
-	
-<a id="chapter-5"></a>
-## FAQ
-### Основные вопросы
-В: Как скачать с этого грёбаного сайта?  
-О: На главной странице проекта (где ты читаешь этот текст) вверху справа зелёная кнопка **Clone or download**, вот её жми, там будет **Download ZIP**
-
-В: Скачался какой то файл .zip, куда его теперь?  
-О: Это архив. Можно открыть стандартными средствами Windows, но думаю у всех на компьютере установлен WinRAR, архив нужно правой кнопкой и извлечь.
-
-В: Я совсем новичок! Что мне делать с Ардуиной, где взять все программы?  
-О: Читай и смотри видос http://alexgyver.ru/arduino-first/
-
-В: Вылетает ошибка загрузки / компиляции!
-О: Читай тут: https://alexgyver.ru/arduino-first/#step-5
-
-В: Сколько стоит?  
-О: Ничего не продаю.
-
-### Вопросы по этому проекту
-
-<a id="chapter-6"></a>
-## Полезная информация
-* [Мой сайт](http://alexgyver.ru/)
-* [Основной YouTube канал](https://www.youtube.com/channel/UCgtAOyEQdAyjvm9ATCi_Aig?sub_confirmation=1)
-* [YouTube канал про Arduino](https://www.youtube.com/channel/UC4axiS76D784-ofoTdo5zOA?sub_confirmation=1)
-* [Мои видеоуроки по пайке](https://www.youtube.com/playlist?list=PLOT_HeyBraBuMIwfSYu7kCKXxQGsUKcqR)
-* [Мои видеоуроки по Arduino](http://alexgyver.ru/arduino_lessons/)

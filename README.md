@@ -1,4 +1,3 @@
-![PROJECT_PHOTO](https://github.com/AlexGyver/GyverMatrixBT/blob/master/proj_img.jpg)
 # Bluetooth адресная матрица на Arduino
 * [Описание проекта](#chapter-0)
 * [Папки проекта](#chapter-1)

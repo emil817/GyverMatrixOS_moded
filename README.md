@@ -12,7 +12,7 @@
 https://youtu.be/m3FgDEwhsDs
 
 Этот проект является соединением проектов AlexGyver GyverMatrixBT и vvip-68 GyverPanelWiFi.
-Это прошивка для гирлянд на ws2812b без управления по wifi, основа - GyverMatrixBT, но добавлены режимы из прошивки vvip-68.
+Это прошивка для гирлянд на ws2812b с управлением по bluetooth, основа - GyverMatrixBT, но добавлены режимы из прошивки vvip-68.
 
 https://github.com/AlexGyver/GyverMatrixBT
 

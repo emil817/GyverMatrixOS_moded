@@ -73,8 +73,8 @@ https://github.com/vvip-68/GyverPanelWiFi
 ## Материалы и компоненты
 ### Ссылки оставлены на магазины, с которых я закупаюсь уже не один год
 Полный список компонентов есть в статье https://alexgyver.ru/matrix_guide/
-- Arduino NANO https://ali.ski/RJYuq  https://ali.ski/8JonUm  https://ali.ski/0DIg3
-- Bluetooth HC-06 https://ali.ski/nrJ-G  https://ali.ski/0H5Vk  https://ali.ski/xC5vwp
+- Arduino NANO https://aliexpress.ru/item/32341832857.html https://aliexpress.ru/wholesale?catId=0&initiative_id=AS_20211116060114&SearchText=arduino+nano
+- Bluetooth HC-06 https://aliexpress.ru/item/32342784842.html?_ga=2.21226491.1909199528.1637069945-488896742.1581396783&sku_id=58728349025 https://aliexpress.ru/wholesale?SearchText=hc-06
 - Матрицы разные https://ali.ski/ft9Y6T
 - Лента https://ali.ski/cXIgB1
 - Модульная гирлянда https://ali.ski/qrVjv

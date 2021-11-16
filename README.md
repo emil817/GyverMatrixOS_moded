@@ -15,6 +15,7 @@ https://youtu.be/m3FgDEwhsDs
 Это прошивка для гирлянд на ws2812b без управления по wifi, основа - GyverMatrixBT, но добавлены режимы из прошивки vvip-68.
 
 https://github.com/AlexGyver/GyverMatrixBT
+
 https://github.com/vvip-68/GyverPanelWiFi
 
 

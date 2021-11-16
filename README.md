@@ -8,6 +8,7 @@
 <a id="chapter-0"></a>
 ## Описание проекта
 Матрица из адресных светодиодов с управлением по bluetooth.
+https://youtu.be/m3FgDEwhsDs
 Этот проект является соединением проектов AlexGyver GyverMatrixBT и vvip-68 GyverPanelWiFi.
 Это прошивка для гирлянд на ws2812b без управления по wifi, основа - GyverMatrixBT, но добавлены режимы из прошивки vvip-68.
 https://github.com/AlexGyver/GyverMatrixBT
@@ -16,8 +17,7 @@ https://github.com/vvip-68/GyverPanelWiFi
 
 [Прошивка](https://github.com/emil817/GyverMatrixOS_moded/tree/main/firmware/GyverMatrixOS_v1.12)
 
-Гайд по матрицам от AlexGyver: https://alexgyver.ru/matrix_guide/  
-
+Гайд по матрицам от AlexGyver: https://alexgyver.ru/matrix_guide/
 
 #### Особенности:
  - Управление со смартфона по Bluetooth

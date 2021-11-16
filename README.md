@@ -19,7 +19,7 @@ https://github.com/AlexGyver/GyverMatrixBT
 https://github.com/vvip-68/GyverPanelWiFi
 
 
-[Прошивка](https://github.com/emil817/GyverMatrixOS_moded/tree/main/firmware/GyverMatrixOS_v1.12)
+[Ссылка сразу на прошивку](https://github.com/emil817/GyverMatrixOS_moded/tree/main/firmware/GyverMatrixOS_v1.12)
 
 Гайд по матрицам от AlexGyver: https://alexgyver.ru/matrix_guide/
 

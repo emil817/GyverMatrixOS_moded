@@ -1,15 +1,6 @@
-/*
-  Скетч к проекту "Адресная матрица"
-  Гайд по постройке матрицы: https://alexgyver.ru/matrix_guide/
-  Страница проекта (схемы, описания): https://alexgyver.ru/GyverMatrixBT/
-  Подробное описание прошивки: https://alexgyver.ru/gyvermatrixos-guide/
-  Исходники на GitHub: https://github.com/AlexGyver/GyverMatrixBT/
-  Нравится, как написан код? Поддержи автора! https://alexgyver.ru/support_alex/
-  Автор: AlexGyver Technologies, 2018
-  https://AlexGyver.ru/
-*/
 
-// GyverMatrixOS
+
+// GyverMatrixOS 
 // Версия прошивки 1.12, совместима с приложением GyverMatrixBT версии 1.12 и выше
 // 1.12 - поправлен косяк с кнопкой SET на wemos/nodemcu
 

@@ -5,6 +5,8 @@
 * [Материалы и компоненты](#chapter-3)
 * [Как скачать и прошить](#chapter-4)
 
+[Ссылка сразу на прошивку](https://github.com/emil817/GyverMatrixOS_moded/tree/main/firmware/GyverMatrixOS_v1.12)
+
 <a id="chapter-0"></a>
 ## Описание проекта
 Матрица из адресных светодиодов с управлением по bluetooth.
@@ -18,8 +20,6 @@ https://github.com/AlexGyver/GyverMatrixBT
 
 https://github.com/vvip-68/GyverPanelWiFi
 
-
-[Ссылка сразу на прошивку](https://github.com/emil817/GyverMatrixOS_moded/tree/main/firmware/GyverMatrixOS_v1.12)
 
 Гайд по матрицам от AlexGyver: https://alexgyver.ru/matrix_guide/
 

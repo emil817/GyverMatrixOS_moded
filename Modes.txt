@@ -20,9 +20,7 @@
     paletteRoutine();     // палитра
     prizmataRoutine();    // синусы
     munchRoutine();       // вышиванка
-    rainRoutine();        // дождь
     fire2Routine();       // огонь2 - камин
-    arrowsRoutine();      // стрелки
 
   Крутые эффекты "шума":
     madnessNoise();       // цветной шум во всю матрицу
@@ -38,9 +36,7 @@
   Игры:
     snakeRoutine();     // змейка
     tetrisRoutine();    // тетрис
-    mazeRoutine();      // лабиринт
     runnerRoutine();    // бегалка прыгалка
-    flappyRoutine();    // flappy bird
     arkanoidRoutine();  // арканоид
 
   Бегущая строка:

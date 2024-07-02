@@ -3,6 +3,9 @@
 * [Папки проекта](#chapter-1)
 * [Схемы подключения](#chapter-2)
 
+### Этот проект является дополнением проекта AlexGyver GyverMatrixBT режимами из vvip-68 GyverPanelWiFi.
+### Это прошивка для гирлянд на ws2812b с управлением по bluetooth, основа - GyverMatrixBT, но добавлены режимы из прошивки vvip-68.
+
 [Ссылка сразу на прошивку](https://github.com/emil817/GyverMatrixOS_moded/tree/main/firmware/GyverMatrixOS_v1.12)
 
 <a id="chapter-0"></a>
@@ -10,9 +13,6 @@
 Матрица из адресных светодиодов с управлением по bluetooth.
 
 https://youtu.be/m3FgDEwhsDs
-
-Этот проект является соединением проектов AlexGyver GyverMatrixBT и vvip-68 GyverPanelWiFi.
-Это прошивка для гирлянд на ws2812b с управлением по bluetooth, основа - GyverMatrixBT, но добавлены режимы из прошивки vvip-68.
 
 https://github.com/AlexGyver/GyverMatrixBT
 https://alexgyver.ru/gyvermatrixbt/

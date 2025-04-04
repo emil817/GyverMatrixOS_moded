@@ -14,9 +14,11 @@
 
 https://youtu.be/m3FgDEwhsDs
 
+Исходная прошивка
 https://github.com/AlexGyver/GyverMatrixBT
 https://alexgyver.ru/gyvermatrixbt/
 
+Прошивка для матрицы на плате с WiFi
 https://github.com/vvip-68/GyverPanelWiFi
 
 
